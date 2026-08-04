@@ -36,8 +36,8 @@ body {
     #111 75%,
     #020202 100%
   );
-
-  color: white;
+  font-weight: bold;
+  color: linear-gradient(to right, #9b0bb5, #ffd54f);
 
   position: relative;
 }
