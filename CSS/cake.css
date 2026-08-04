@@ -1,0 +1,985 @@
+/*=========================================
+            RESET
+=========================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 209, 102, 0.25) 0%,
+    rgba(40, 25, 15, 0.18) 25%,
+    #0d0d0d 60%,
+    #000 100%
+  );
+}
+
+/*=========================================
+            BACKGROUND
+=========================================*/
+body {
+  background: radial-gradient(
+    circle,
+    rgba(255, 210, 90, 0.28) 0%,
+
+    rgba(60, 40, 15, 0.3) 35%,
+
+    #111 72%,
+
+    #000 100%
+  );
+}
+.background {
+  position: fixed;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 209, 102, 0.18),
+    rgba(20, 20, 20, 0.45) 45%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+
+  z-index: -2;
+}
+
+/*=========================================
+            SCENE
+=========================================*/
+
+.scene {
+  position: relative;
+
+  width: 500px;
+
+  height: 600px;
+}
+
+/*=========================================
+            CAKE
+=========================================*/
+
+.cake {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 40px;
+
+  transform: translateX(-50%);
+}
+
+/*=========================================
+            PLATE
+=========================================*/
+
+.plate {
+  position: absolute;
+
+  width: 320px;
+
+  height: 30px;
+
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: linear-gradient(to bottom, #ffffff, #d8d8d8);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.layer {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 22px;
+
+  overflow: visible;
+}
+
+/*=========================================
+            BOTTOM
+=========================================*/
+
+.bottom {
+  width: 280px;
+  height: 115px;
+
+  bottom: 18px;
+
+  background: linear-gradient(to bottom, #ffd86e 0%, #f5be46 55%, #d99616 100%);
+
+  border-radius: 20px 20px 28px 28px;
+
+  box-shadow:
+    inset 0 8px rgba(255, 255, 255, 0.18),
+    inset 0 -8px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/*=========================================
+            TOP
+=========================================*/
+
+.bottom {
+  width: 280px;
+  height: 115px;
+
+  bottom: 18px;
+
+  background: linear-gradient(to bottom, #ffd86e 0%, #f5be46 55%, #d99616 100%);
+
+  border-radius: 20px 20px 28px 28px;
+
+  box-shadow:
+    inset 0 8px rgba(255, 255, 255, 0.18),
+    inset 0 -8px rgba(0, 0, 0, 0.12),
+    0 10px 25px rgba(0, 0, 0, 0.35);
+}
+/*=========================================
+                CREAM
+=========================================*/
+
+.cream {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 22px;
+
+  background: #fff8f4;
+
+  border-radius: 30px;
+
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.05);
+}
+
+/*=========================================
+            CREAM DRIP
+=========================================*/
+
+.cream::before {
+  content: "";
+
+  position: absolute;
+
+  width: 22px;
+
+  height: 30px;
+
+  left: 18%;
+
+  top: 12px;
+
+  background: #fff8f4;
+
+  border-radius: 0 0 20px 20px;
+}
+
+.cream::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 24px;
+
+  right: 22%;
+
+  top: 10px;
+
+  background: #fff8f4;
+
+  border-radius: 0 0 20px 20px;
+}
+.cream::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+
+  height: 24px;
+
+  right: 22%;
+
+  top: 10px;
+
+  background: #fff8f4;
+
+  border-radius: 0 0 20px 20px;
+}
+
+/* Top Cake */
+.top {
+  width: 170px;
+  height: 85px;
+
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: 110px;
+
+  z-index: 5;
+
+  background: linear-gradient(to bottom, #ffeaa6, #ffd86e, #f0b53a);
+
+  border-radius: 20px 20px 25px 25px;
+}
+
+.top .cream::before {
+  width: 18px;
+
+  height: 24px;
+
+  left: 25px;
+}
+
+.top .cream::after {
+  width: 20px;
+
+  height: 30px;
+
+  right: 28px;
+}
+
+/* Bottom Cake */
+.bottom {
+  width: 280px;
+  height: 115px;
+
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: 0;
+
+  z-index: 2;
+}
+
+.bottom .cream::before {
+  width: 22px;
+
+  height: 35px;
+
+  left: 40px;
+}
+
+.bottom .cream::after {
+  width: 24px;
+
+  height: 42px;
+
+  right: 45px;
+}
+
+/*=========================================
+            CREAM DOT
+=========================================*/
+
+.cream-dot {
+  position: absolute;
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: #fff8f0;
+
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+
+  z-index: 15;
+}
+
+/* Top */
+
+.dot1 {
+  left: -30px;
+  bottom: 158px;
+}
+.dot2 {
+  left: -5px;
+  bottom: 154px;
+}
+.dot3 {
+  left: 20px;
+  bottom: 158px;
+}
+
+.dot4 {
+  left: -70px;
+  bottom: 54px;
+}
+.dot5 {
+  left: -35px;
+  bottom: 43px;
+}
+.dot6 {
+  left: 0px;
+  bottom: 40px;
+}
+.dot7 {
+  left: 35px;
+  bottom: 43px;
+}
+.dot8 {
+  left: 70px;
+  bottom: 54px;
+}
+/*=========================================
+                CHERRY
+=========================================*/
+
+.cherry {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle at 30% 30%, #ff8a80, #e53935 70%);
+
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.35);
+}
+
+.cherry::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  left: 4px;
+  top: 4px;
+}
+
+.cherry::before {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+
+  height: 14px;
+
+  background: #4caf50;
+
+  left: 7px;
+
+  top: -10px;
+
+  transform: rotate(-20deg);
+}
+
+/* Cherry Position */
+
+.cherry1 {
+  left: 128px;
+  bottom: 214px;
+}
+
+.cherry2 {
+  left: 150px;
+  bottom: 228px;
+}
+
+.cherry3 {
+  left: 172px;
+  bottom: 214px;
+}
+/*=========================================
+            HIGHLIGHT
+=========================================*/
+
+.layer::after {
+  content: "";
+
+  position: absolute;
+
+  top: 12px;
+
+  left: 18px;
+
+  width: 45%;
+
+  height: 7px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+/* ===========================
+        BANNER
+=========================== */
+
+.banner {
+  position: absolute;
+
+  top: -300px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 999;
+}
+
+.flag {
+  background: linear-gradient(45deg, #ffd54f, #ffb300);
+
+  color: #5b2e00;
+
+  padding: 14px 35px;
+
+  border-radius: 40px;
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  letter-spacing: 5px;
+
+  box-shadow: 0 0 18px rgba(255, 213, 79, 0.45);
+}
+
+.rope {
+  position: absolute;
+
+  width: 2px;
+  height: 80px;
+
+  background: #e8d8a8;
+}
+
+.left {
+  left: 20px;
+  top: -80px;
+}
+
+.right {
+  right: 20px;
+  top: -80px;
+}
+
+.bunting {
+  position: absolute;
+
+  top: -90px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 420px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  z-index: 998;
+
+  gap: 10px;
+}
+
+.bunting span {
+  width: 10px;
+
+  height: 40px;
+
+  border-left: 12px solid transparent;
+
+  border-right: 12px solid transparent;
+
+  border-top: 22px solid #ffd54f;
+
+  position: relative;
+}
+
+.bunting span:nth-child(even) {
+  border-top-color: #ff6b6b;
+}
+
+.bunting span:nth-child(3n) {
+  border-top-color: #6ec6ff;
+}
+
+.bunting span:nth-child(4n) {
+  border-top-color: #9ccc65;
+}
+.bunting span:nth-child(1) {
+  top: 0;
+}
+
+.bunting span:nth-child(2) {
+  top: 10px;
+}
+
+.bunting span:nth-child(3) {
+  top: 18px;
+}
+
+.bunting span:nth-child(4) {
+  top: 24px;
+}
+
+.bunting span:nth-child(5) {
+  top: 18px;
+}
+
+.bunting span:nth-child(6) {
+  top: 10px;
+}
+
+.bunting span:nth-child(7) {
+  top: 0;
+}
+
+/*=========================================
+                CANDLE
+=========================================*/
+
+.candle {
+  position: absolute;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  z-index: 20;
+}
+
+/*=============================
+        POSITION
+=============================*/
+
+.candle-1 {
+  left: -30px;
+  bottom: 180px;
+}
+
+.candle-9 {
+  left: -5px;
+  bottom: 180px;
+}
+/*=============================
+        FLAME
+=============================*/
+
+.flame {
+  width: 16px;
+
+  height: 24px;
+
+  margin-bottom: 4px;
+
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+
+  background: radial-gradient(
+    circle at 50% 30%,
+    #fff9c4 0%,
+    #ffd54f 40%,
+    #ff9800 100%
+  );
+
+  box-shadow:
+    0 0 12px #ffd54f,
+    0 0 25px #ffc107,
+    0 0 45px rgba(255, 193, 7, 0.5);
+
+  animation: flicker 0.18s infinite alternate;
+}
+
+/*=============================
+        CANDLE BODY
+=============================*/
+
+.number {
+  background: repeating-linear-gradient(
+    45deg,
+    #ffd54f 0px,
+    #ffd54f 8px,
+    #6a1b9a 8px,
+    #6a1b9a 16px
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.flame {
+  position: absolute;
+
+  top: -22px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+/*=============================
+        SMOKE
+=============================*/
+
+.smoke {
+  position: absolute;
+
+  top: -18px;
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  filter: blur(5px);
+
+  opacity: 0;
+}
+
+/*=============================
+    LIGHT FROM FLAME
+=============================*/
+
+.flame::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 209, 102, 0.18);
+
+  filter: blur(18px);
+
+  z-index: -1;
+}
+
+/*=============================
+        FLICKER
+=============================*/
+
+@keyframes flicker {
+  from {
+    transform: rotate(-3deg) scale(1);
+  }
+
+  to {
+    transform: rotate(3deg) scale(1.08);
+  }
+}
+
+/*=============================
+    BLOWN (JS dùng sau)
+=============================*/
+
+.candle.blown .flame {
+  opacity: 0;
+
+  transform: scale(0.2);
+
+  transition: 0.4s;
+}
+
+.candle.blown .smoke {
+  opacity: 1;
+
+  animation: smoke 2s ease forwards;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0.7;
+
+    transform: translateY(0) scale(0.5);
+  }
+
+  40% {
+    opacity: 0.6;
+
+    transform: translateY(-20px) translateX(-4px) scale(0.9);
+  }
+
+  70% {
+    opacity: 0.3;
+
+    transform: translateY(-45px) translateX(6px) scale(1.4);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateY(-70px) scale(2);
+  }
+}
+/*=========================================
+            CAKE APPEAR
+=========================================*/
+
+.cake {
+  opacity: 0;
+
+  transform: translateX(-50%) translateY(120px) scale(0.8);
+
+  animation: cakeAppear 2s ease forwards;
+}
+
+/*=========================================
+            FLOATING
+=========================================*/
+
+@keyframes floating {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/*=========================================
+            CAKE APPEAR
+=========================================*/
+
+@keyframes cakeAppear {
+  0% {
+    opacity: 0;
+
+    transform: translateX(-50%) translateY(150px) scale(0.7);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(-10px) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/*=========================================
+        LIGHT GLOW
+=========================================*/
+
+.cake::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 35%;
+
+  transform: translate(-50%, -50%);
+
+  width: 260px;
+
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 209, 102, 0.28),
+    rgba(255, 209, 102, 0.08),
+    transparent
+  );
+
+  filter: blur(45px);
+
+  z-index: -2;
+}
+
+/*=========================================
+            SHADOW
+=========================================*/
+
+.cake::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -10px;
+
+  transform: translateX(-50%);
+
+  width: 270px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  filter: blur(12px);
+
+  z-index: -1;
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media screen and (max-width: 768px) {
+  .scene {
+    width: 100%;
+
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scene {
+    transform: scale(0.65);
+  }
+}
+.text {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: white;
+
+  text-align: center;
+
+  opacity: 0;
+}
+
+#wish {
+  top: 60px;
+
+  font-size: 30px;
+}
+
+#countdown {
+  top: 120px;
+
+  font-size: 80px;
+
+  font-weight: bold;
+
+  color: #ffd54f;
+}
+
+#birthday {
+  top: 40px;
+}
+
+#birthday h1 {
+  color: #ffd54f;
+
+  margin-bottom: 10px;
+}
+
+#nextBtn {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  padding: 12px 28px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #ffd54f;
+
+  cursor: pointer;
+
+  display: none;
+}
+
+.smoke {
+  opacity: 0;
+}
+
+.smokeAnimation {
+  animation: smokeUp 2s forwards;
+}
+
+@keyframes smokeUp {
+  from {
+    transform: translateY(0);
+
+    opacity: 0.8;
+  }
+
+  to {
+    transform: translateY(-50px);
+
+    opacity: 0;
+  }
+}

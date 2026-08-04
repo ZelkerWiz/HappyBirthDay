@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Letter For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/letter.css" />
+  </head>
+
+  <body>
+    <!-- Background -->
+
+    <div class="background">
+      <div class="overlay"></div>
+
+      <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Letter -->
+
+    <main class="letter-container">
+      <div class="letter-card">
+        <h1 class="title">Gửi tới <span class="highlight">Như Ý</span></h1>
+
+        <div class="typing-area">
+          <!-- JS sẽ lấy nội dung ở đây -->
+
+          <p id="typingText"></p>
+          <p id="hiddenText" style="display: none">
+            Gửi tới <span class="highlight">Như Ý</span>
+            <span class="highlight">Chúc bà có một ngày sinh nhật thật hạnh phúc</span>, thêm tuổi mới thật xinh đẹp, rực rỡ hơn trước đây, học thật giỏi, đạt được những điều mà bà mong muốn nha.
+            Tui muốn nói với bà là <span class="highlight">tui thật sự thích Thạch Thị Như Ý á ^-^</span>, tui nhắn dị chỉ mong bà biết rằng có người quan tâm bà, sẽ sẵn sàng chia sẻ vui buồn cùng với bà, lắng nghe bà á, chúc những điều tốt nhất sẽ đến bên bà nhee...
+          </p>
+
+          <span class="cursor"></span>
+        </div>
+
+        <button id="nextBtn">Tiếp tục →</button>
+      </div>
+    </main>
+
+    <!-- Nhạc nền -->
+
+    <audio id="bgMusic" loop>
+      <source src="../Audio/birthday.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="../JavaScript/letter.js"></script>
+  </body>
+</html>
