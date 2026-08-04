@@ -36,8 +36,8 @@ body {
     #121212 70%,
     #000 100%
   );
-
-  color: rgb(242, 211, 6);
+  font-weight: bold;
+  color: linear-gradient(to right, #9b0bb5, #ffd54f);
 }
 
 /* =====================================
