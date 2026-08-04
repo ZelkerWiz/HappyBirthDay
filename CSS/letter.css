@@ -28,11 +28,9 @@ body {
   align-items: center;
 
   background: radial-gradient(
-    circle,
-    rgba(255, 214, 102, 0.18) 0%,
-    rgba(110, 70, 170, 0.15) 35%,
-    #17131f 70%,
-    #050505 100%
+    circle at center,
+    rgba(178, 126, 4, 0.647),
+    transparent 60%
   );
 
   position: relative;

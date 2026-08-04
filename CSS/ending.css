@@ -54,8 +54,8 @@ body::before {
   inset: 0;
 
   background: radial-gradient(
-    circle,
-    rgba(255, 220, 120, 0.12),
+    circle at center,
+    rgba(178, 126, 4, 0.647),
     transparent 60%
   );
 
